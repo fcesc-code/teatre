@@ -1,0 +1,27 @@
+@use 'sass:color'
+
+$c_txt_title: #ffffea
+$c_txt_subtitle: #bc0600
+$c_txt_contrast: #ff5e5b
+$c_txt_highlighted: #daa520
+$c_txt_main: #eeeeee
+$c_txt_white: #fff
+$c_txt_lightbluish: #c7d7fa
+$c_txt_darkbluish: #061424
+$c_txt_black: #0e0e05
+
+$c_bg_ivory: #ffffea
+$c_bg_lightblue: #9aa6b5
+$c_bg_metalgray: #384753
+$c_bg_redgray: #6a5e5e
+$c_bg_dark:#090512
+
+$c_red: #ff1020
+$c_amber: #fcb800
+$c_green: #05f140
+
+$colors_background_map: ('bg_ivory': $c_bg_ivory, 'bg_lightblue': $c_bg_lightblue, 'bg_metalgray': $c_bg_metalgray, 'bg_redgray': $c_bg_redgray, 'bg_dark': $c_bg_dark)
+
+@each $colorName, $hex in $colors_background_map
+  .#{$colorName}_bg
+    background-color: $hex

@@ -1,0 +1,26 @@
+.dropdown
+  position: relative
+
+  /* Hide the dropdown's content by default */
+  .dropdown__content 
+
+    /* Position it right below the trigger element */
+    position: absolute
+    top: 100%
+    left: 0
+
+    /* It should be on the top of other elements */
+    z-index: 9999
+    display: none
+
+    /* Size */
+    max-width: 20rem
+    min-height: 8rem
+
+    padding-top: .2rem
+    background-color: #fff
+  
+  /* Show the content when hover on the container */
+  .dropdown:hover .dropdown__content 
+    display: block
+                  
