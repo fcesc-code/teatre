@@ -1,6 +1,3 @@
-@use 'breakpoints' as *
-@use 'colors' as *
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Architects+Daughter&display=swap')
 
 $fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
@@ -18,13 +15,6 @@ $fsize_xxl: 3.8rem
 
 $fsize_reduce: .85em
 $fsize_increase: 1.2em
-
-h1, h2, h3, h4, h5, h6
-  color: $c_txt_lightbluish
-  @include fallback
-    text-align: left
-  @include wearablesAndPhones
-    text-align: center
 
 h1 
   padding: 1.5rem 0
