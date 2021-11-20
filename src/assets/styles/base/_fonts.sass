@@ -1,3 +1,4 @@
+@use 'colors'
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Architects+Daughter&display=swap')
 
 $fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
@@ -18,24 +19,24 @@ $fsize_increase: 1.2em
 
 h1 
   padding: 1.5rem 0
-  font-size: clamp($fsize_xxl, 2.8vw, 5.5rem)
+  font-size: clamp($fsize_xxl, $fsize_xl + 2.8vw, 5.5rem)
 
 h2
   padding: 1.25rem 0
-  font-size: clamp($fsize_xl, 2.2vw, $fsize_xxl)
+  font-size: clamp($fsize_xl, $fsize_l + 2.2vw, $fsize_xxl)
   font-family: $fhand
 
 h3
   padding: 1rem 0
-  font-size: clamp($fsize_l, 1.8vw, $fsize_xl)
+  font-size: clamp($fsize_l, $fsize_m + 1.8vw, $fsize_xl)
 
 h4
   padding: .75rem 0
-  font-size: clamp($fsize_m, 1.2vw, $fsize_l)
+  font-size: clamp($fsize_m, $fsize_standard + 1.2vw, $fsize_l)
 
 h5, h6, p, blockquote, ol, ul
   padding: .5rem 0
-  font-size: clamp($fsize_standard, 1vw, $fsize_standard + .5rem)
+  font-size: clamp($fsize_standard, $fsize_s + 1vw, $fsize_m + .25rem)
   font-family: $fsans
 
 small

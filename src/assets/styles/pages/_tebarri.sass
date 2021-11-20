@@ -1,1 +1,16 @@
 @use '../base/' as *
+
+.title--standard
+  color: $c_txt_title
+  padding: 0
+
+.title--secondary
+  color: $c_txt_lightbluish
+  padding: 0
+  font-size: clamp($fsize_s, $fsize_xs + 1vw, $fsize_standard)
+
+.title
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  align-items: center

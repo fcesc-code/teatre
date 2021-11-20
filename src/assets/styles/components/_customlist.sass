@@ -1,0 +1,47 @@
+@use '../base/' as *
+
+.list
+  color: $c_txt_white
+  list-style: none
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  align-items: center
+  &::before
+    content: ''
+    width: 50%
+    border-bottom: 1px solid $c_txt_lightbluish
+  &::after
+    content: ''
+    width: 50%
+    border-top: 1px solid $c_txt_lightbluish
+
+.list__item
+  max-width: max(95vw, 70rem)
+  min-width: min(90vw, 25rem)
+  display: flex
+  flex-flow: row wrap
+  justify-content: flext-start
+  align-items: flex-start
+
+.list__item-title
+  color: $c_txt_white
+  font-weight: 800
+  letter-spacing: .04rem
+
+.list__item-text
+  color: $c_txt_white
+
+.list__item-number
+  color: $c_txt_lightbluish
+  position: relative
+  width: 2rem
+  margin: 1.5rem 2rem 1.5rem
+  &::after
+    content: ''
+    padding: 1.5rem
+    border: 1px solid $c_txt_lightbluish
+    border-radius: 50%
+    position: absolute
+    left: -1.25rem
+    top: -.5rem
