@@ -25,3 +25,6 @@ $colors_background_map: ('ivory': $c_bg_ivory, 'lightblue': $c_bg_lightblue, 'me
 @each $colorName, $hex in $colors_background_map
   .bg-#{$colorName}
     background-color: $hex
+
+p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, li, a, span
+  color: $c_txt_main
