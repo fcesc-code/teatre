@@ -17,25 +17,32 @@
     content: ''
     position: absolute
     border: 2px solid $c_txt_subtitle
-    border-radius: 0 3.5rem 0 0
-    width: 4.5rem
+    border-radius: 0 1.5rem 0 0
+    width: min(4.5rem, 20vw)
     height: 4.5rem
-    bottom: -4.5rem
+    bottom: -1.5rem
     left: 3.5rem
     border-bottom: none
     border-left: none
     z-index: 3
+    @include wearables
+      display: none
   &::before
     content: ''
     position: absolute
-    width: 80px
-    border: 6px solid #292a2b
-    bottom: -3px
-    left: 50px
+    width: min(4.5rem, 20vw)
+    border: 5px solid $c_bg_dark
+    bottom: 3rem
+    left: 3.5rem
     z-index: 2
+    @include wearables
+      display: none
 
-.blockquote__author
+.blockquote__author, .blockquote__work
   color: $c_txt_main
+  @include fallback
+    margin-left: min(5.5rem, 24vw)
 
 .blockquote__source
   color: $c_txt_main
+  transform: translateY(min(-20vw, -4rem),0)
