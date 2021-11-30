@@ -3,11 +3,15 @@
 .width-container
   background-color: $c_bg_dark
   margin: 0 auto
-  @include fallback
-    width: min(98vw, 50rem)
-  @include allMobile
-    width: min(90vw, 75rem)
-  @include standardDevices
+  width: 100%
+  @include smallDevices
+    width: min(100vw, 75rem)
+  @include mediumDevices
     width: min(83vw, 90rem)
-  @include hugeDevices
+  @include largeDevices
     width: min(74vw, 110rem)
+  @include xlargeDevices
+    width: min(60vw, 160rem)
+
+html
+  background-color: $c_bg_dark

@@ -1,3 +1,4 @@
+@use 'breakpoints' as *
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Architects+Daughter&display=swap')
 
 $fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
@@ -9,9 +10,9 @@ $fsize_standard: 1rem
 $fsize_xs: .85rem
 $fsize_s: .95rem
 $fsize_m: 1.2rem
-$fsize_l: 1.9rem
-$fsize_xl: 2.5rem
-$fsize_xxl: 3.8rem
+$fsize_l: 1.7rem
+$fsize_xl: 2.3rem
+$fsize_xxl: 3.9rem
 
 $fsize_reduce: .85em
 $fsize_increase: 1.2em
@@ -24,6 +25,8 @@ h2
   padding: 1.25rem 0
   font-size: clamp($fsize_xl, $fsize_l + 2.2vw, $fsize_xxl)
   font-family: $fhand
+  font-weight: 450
+  line-height: 3.5rem
 
 h3
   padding: 1rem 0
@@ -38,12 +41,17 @@ h5, h6, p, blockquote, ol, ul
   font-size: clamp($fsize_standard, $fsize_s + 1vw, $fsize_m + .25rem)
   font-family: $fsans
 
+h1, h2, h3, h4, h5, h6
+  @include smallDevices
+    text-align: center
+
 small
   font-family: $fsans
 
 p
   word-spacing: .04rem
-  letter-spacing: .03rem
+  line-height: 2.5rem
+  padding: 1.5rem 0
 
 a, span, cite
   font-size: inherit
@@ -51,6 +59,7 @@ a, span, cite
 
 blockquote
   font-style: italic
+  line-height: 2.2rem
 
 li
   padding: .2rem 0 .2rem 0

@@ -7,36 +7,35 @@
   flex-flow: column nowrap
   justify-content: flex-start
   align-items: center
+  padding: 2.5rem 0
   &::before
     content: ''
-    width: 50%
+    width: 80%
     border-bottom: 1px solid $c_txt_lightbluish
   &::after
     content: ''
-    width: 50%
+    width: 80%
     border-top: 1px solid $c_txt_lightbluish
 
 .list__item
-  max-width: max(95vw, 70rem)
-  min-width: min(90vw, 25rem)
+  width: 80%
   display: flex
   flex-flow: row wrap
   justify-content: flext-start
   align-items: flex-start
-
-.list__item-title
-  color: $c_txt_white
-  font-weight: 800
-  letter-spacing: .04rem
-
-.list__item-text
-  color: $c_txt_white
+  @include smallDevices
+    flex-flow: column nowrap
+    align-items: center
+    width: 100%
 
 .list__item-number
   color: $c_txt_lightbluish
   position: relative
   width: 2rem
   margin: 1.5rem 2rem 1.5rem
+  transform: translate(0, .5rem)
+  @include smallDevices
+    align-self: flex-start
   &::after
     content: ''
     padding: 1.5rem
@@ -45,3 +44,17 @@
     position: absolute
     left: -1.2rem
     top: -.6rem
+
+.list__item-body
+  width: 100%
+  align-self: flex-start
+
+.list__item-title
+  color: $c_txt_white
+  font-weight: 800
+  letter-spacing: .04rem
+  padding: .8rem 0 .5rem 0
+
+.list__item-text
+  color: $c_txt_white
+  padding: 0 0 .8rem 0
