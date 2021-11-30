@@ -1,21 +1,13 @@
 @use '../base/' as *
   
-body
+.width-container
   background-color: $c_bg_dark
-
-.main_container
   margin: 0 auto
-  @include wearables
-    width: 100vw
-  @include phones
-    width: 98vw
-  @include tablets
-    width: 95vw
-  @include noHD
-    width: 92vw
-  @include SHD
-    width: 88vw
-  @include QHD
-    width: 84vw
-  @include HD4K
-    width: 3840px
+  @include fallback
+    width: min(98vw, 50rem)
+  @include allMobile
+    width: min(90vw, 75rem)
+  @include standardDevices
+    width: min(83vw, 90rem)
+  @include hugeDevices
+    width: min(74vw, 110rem)
