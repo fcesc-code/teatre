@@ -6,43 +6,60 @@
   justify-content: flex-start
   align-items: center
   position: relative
+  margin: 2rem 1.5rem
 
 .blockquote__text
   color: $c_txt_main
-  margin: 1rem
-  border: 2px solid $c_txt_subtitle
-  border-radius: 1.5rem
+  margin: 0
+  border: 2px solid $c_txt_highlighted
+  border-bottom: 0
+  border-left: 0
+  border-radius: 0 1.5rem 0 0
   padding: 25px
-  &::after
-    content: ''
-    position: absolute
-    border: 2px solid $c_txt_subtitle
-    border-radius: 0 1.5rem 0 0
-    width: min(4.5rem, 20vw)
-    height: 4.5rem
-    bottom: -1.5rem
-    left: 3.5rem
-    border-bottom: none
-    border-left: none
-    z-index: 3
-    @include wearables
-      display: none
+  @include smallDevices
+    margin: 1rem 0
+  // &::after
+  //   content: ''
+  //   position: absolute
+  //   border: 2px solid $c_txt_highlighted
+  //   border-radius: 0 1.5rem 0 0
+  //   width: min(4.5rem, 20vw)
+  //   height: 4.5rem
+  //   bottom: -1.5rem
+  //   left: 3.5rem
+  //   border-bottom: none
+  //   border-left: none
+  //   z-index: 3
+  //   @include wearables
+  //     display: none
   &::before
     content: ''
     position: absolute
-    width: min(4.5rem, 20vw)
-    border: 5px solid $c_bg_dark
+    // width: .25rem
+    width: calc(1rem + 20%)
+    height: 0
+    border: 4px solid $c_bg_dark
     bottom: 3rem
-    left: 3.5rem
+    left: -1rem
+    top: 1rem
     z-index: 2
-    @include wearables
-      display: none
 
-.blockquote__author, .blockquote__work
-  color: $c_txt_main
-  @include fallback
-    margin-left: min(5.5rem, 24vw)
+.blockquote__work
+  color: $c_txt_highlighted
+  padding: 0 0 0 2rem
+  border-right: 2px solid $c_txt_highlighted
+
+.blockquote__author
+  background-color: $c_txt_highlighted
+  color: $c_txt_black
+  padding: 0 0 0 2rem
+  border: 2px solid $c_txt_highlighted
+  border-radius: .25rem 0 1.5rem 1.5rem
+  font-weight: 600
+  // font-style: normal
 
 .blockquote__source
-  color: $c_txt_main
-  transform: translateY(min(-20vw, -4rem),0)
+  margin: 0 0 1.5rem 0
+  width: min(80%, 30rem)
+  align-self: flex-end
+  transform: translateY(-1.5rem)
