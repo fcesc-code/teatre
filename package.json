@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "npm-run-all test stylelint lint clean parcel:build",
+    "build": "npm-run-all test stylelint clean parcel:build",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "lintfix": "eslint src/** --fix",
