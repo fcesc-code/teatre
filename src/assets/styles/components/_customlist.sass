@@ -1,0 +1,60 @@
+@use '../base/' as *
+
+.list
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: flex-start
+  padding: 2.5rem 0
+  color: $c_txt_white
+  list-style: none
+  &::before
+    width: 80%
+    content: ''
+    border-bottom: 1px solid $c_txt_lightbluish
+  &::after
+    width: 80%
+    content: ''
+    border-top: 1px solid $c_txt_lightbluish
+
+.list__item
+  display: flex
+  flex-flow: row wrap
+  align-items: flex-start
+  justify-content: flext-start
+  width: 80%
+  @include smallDevices
+    width: 100%
+    flex-flow: column nowrap
+    align-items: center
+
+.list__item-number
+  position: relative
+  width: 2rem
+  margin: 1.5rem 2rem 1.5rem
+  color: $c_txt_lightbluish
+  transform: translate(0, .5rem)
+  @include smallDevices
+    align-self: flex-start
+  &::after
+    position: absolute
+    top: -.6rem
+    left: -1.2rem
+    padding: 1.5rem
+    content: ''
+    border: 1px solid $c_txt_lightbluish
+    border-radius: 50%
+
+.list__item-body
+  align-self: flex-start
+  width: 100%
+
+.list__item-title
+  padding: .8rem 0 .5rem 0
+  font-weight: 800
+  letter-spacing: .04rem
+  color: $c_txt_white
+
+.list__item-text
+  padding: 0 0 .8rem 0
+  color: $c_txt_white

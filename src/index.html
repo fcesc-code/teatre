@@ -12,15 +12,83 @@
     <title>tebarri</title>
   </head>
   <body>
-    <header id="top"></header>
-    <main></main>
-    <footer class="page-footer">
-      <small class="page-footer__content">
-        <time datetime="2021-10">Novembre 2021</time>
-      </small>
-      <div class="page-footer__goTop">
-        <a href="#top">&xwedge;</a>
-      </div>
+    <header id="top" class="width-container">
+      <nav>
+        <ul class="navmenu">
+          <li class="navmenu__item">
+            <a class="navmenu__link" href="actors.html">Actors</a>
+          </li>
+          <li class="navmenu__separator">|</li>
+          <li class="navmenu__item">
+            <a class="navmenu__link" href="blog.html">Blog</a>
+          </li>
+          <li class="navmenu__separator">|</li>
+          <li class="navmenu__item">
+            <a class="navmenu__link" href="tebarri.html">tebarri</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="width-container poster">
+      <h1 class="title__container">
+        <span class="title__main">Bodas</span>
+        <span class="title__secondary">de</span>
+        <span class="title__highlighted">sangre</span>
+      </h1>
+      <picture class="poster__foto-container">
+        <img class="poster__foto" src="assets/images/portada_r.webp" alt="" />
+      </picture>
+      <section class="poster__info">
+        <p class="rotated">Teatre marrameu, Barcelona</p>
+      </section>
+      <section class="poster__date">
+        <datetime time="2021-12-5">
+          <span class="poster__date-number">5</span>
+          <span class="poster__date-text"> des</span>
+        </datetime>
+      </section>
+    </main>
+    <footer class="footer width-container">
+      <section class="footer__content">
+        <p class="footer__text">
+          <a class="footer__links" href="https://github.com/fcesc-code"
+            >Francesc Brugarolas</a
+          >
+          - Eines HTML i CSS II -
+          <a
+            class="footer__links"
+            href="https://uoc.edu"
+            title="Universitat Oberta de Catalunya"
+            >UOC</a
+          >
+          -
+          <time datetime="2021-11">Novembre 2021</time>
+        </p>
+      </section>
+      <section class="footer__content">
+        <ul class="footer__social">
+          <li class="footer__socialIcon">
+            <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li class="footer__socialIcon">
+            <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="footer__socialIcon">
+            <a href="https://web.whatsapp.com"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+          </li>
+          <li class="footer__socialIcon">
+            <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li class="footer__socialIcon">
+            <a href="https://google.com"><i class="bi bi-google"></i></a>
+          </li>
+          <li class="footer__socialIcon">
+            <a href="#top"><i class="bi bi-arrow-up-circle"></i></a>
+          </li>
+        </ul>
+      </section>
     </footer>
     <script src="./main.js"></script>
   </body>

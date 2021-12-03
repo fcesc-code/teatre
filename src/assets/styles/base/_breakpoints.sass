@@ -39,11 +39,11 @@ $HD4K: 7679px
 // target specific groups
 
 @mixin wearablesAndPhones
-  @media (max-width: #{$phones})
+  @media (max-width: #{$phones + 1px})
     @content
 
 @mixin allMobile
-  @media (max-width: #{$tablets})
+  @media (max-width: #{$tablets + 1px})
     @content
 
 // common use cases
@@ -52,17 +52,17 @@ $HD4K: 7679px
   @content
 
 @mixin smallDevices
-  @media (min-width: #{$wearables + 1px})
-    @content
-
-@mixin mediumDevices
-  @media (min-width: #{$phones + 1px})
+  @media (max-width: #{$phones})
     @content
     
-@mixin standardDevices
-  @media (min-width: #{$tablets + 1px})
+@mixin mediumDevices
+  @media (max-width: #{$noHD})
     @content
 
-@mixin hugeDevices
+@mixin largeDevices
+  @media (max-width: #{$QHD})
+    @content
+
+@mixin xlargeDevices
   @media (min-width: #{$QHD + 1px})
     @content

@@ -1,12 +1,107 @@
 @use '../base/' as *
 
-body
-  display: flex
-  flex-direction: column
+.poster
+  @supports (display: grid)
+    display: grid
+    grid-template-columns: .8fr 1fr 2fr 1.2fr
+    grid-template-rows: 2.5fr .75fr 3.5rem
   height: 100%
   margin: 0
-  background-color: $c_bg_darkbluish
+  background-color: $c_bg_dark
+
+.poster__foto-container
+  @supports (display: grid)
+    grid-area: 1 / 2 / 4 / 4
+  width: 100%
+  height: 100%
+
+.poster__foto
+  width: inherit
+  height: 90vh
+  object-fit: cover
+
+.title__container
+  @supports (display: grid)
+    grid-area: 1 / 4 / 2 / 5
+    justify-self: start
+    align-self: end
+  margin: 0
+  transform: translate(-3rem, 0)
+
+.title__main
+  display: block
+  font-weight: lighter
+  font-family: $fserif
+  letter-spacing: .55rem
+  color: $c_txt_title
+  transform: translate(0, .5rem)
+
+.title__highlighted
+  display: block
+  font-family: $fserif
+  font-weight: bolder
+  letter-spacing: .15rem
+  color: $c_txt_subtitle
+  transform: translate(0, -1rem)
+
+.title__secondary
+  display: block
+  font-family: $fserif
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 2rem)
+  font-weight: leighter
+  color: $c_txt_title
+
+.poster__info
+  @supports (display: grid)
+    grid-area: 1 / 1 / 3 / 2
+    justify-self: end
+    align-self: end
+  color: $c_txt_lightbluish
+
+.rotated
+  text-align: left
+  writing-mode: vertical-lr
+  transform: rotate(180deg)
+
+.poster__date
+  @supports (display: grid)
+    grid-area: 3 / 1 / 4 / 2
+    justify-self: end
+    align-self: end
+
+.poster__date-number
+  font-size: clamp(4rem, 3rem + 3vw, 6rem)
+  font-weight: bold
+  color: $c_txt_highlighted
+
+.poster__date-text
+  font-size: clamp(1rem, 1rem + 1.5vw, 3.5rem)
+  color: $c_txt_highlighted
 
 header, footer
   flex-shrink:0
 
+.navmenu
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: flex-end
+  list-style: none
+
+.navmenu__separator
+  margin: 0
+  padding: .25rem 0
+
+.navmenu__item
+  margin: 0
+  padding: .25rem 1.25rem
+
+.navmenu__link
+  color: inherit
+  text-decoration: none
+  &:visited
+    color: inherit
+    text-decoration: inherit
+  &:hover, &:focus, &:active
+    color: $c_txt_highlighted
+    text-decoration: solid $c_txt_highlighted

@@ -1,0 +1,17 @@
+@use '../base/' as *
+  
+.width-container
+  width: 100%
+  margin: 0 auto
+  background-color: $c_bg_dark
+  @include smallDevices
+    width: min(100vw, 75rem)
+  @include mediumDevices
+    width: min(85vw, 90rem)
+  @include largeDevices
+    width: min(76vw, 110rem)
+  @include xlargeDevices
+    width: min(62vw, 160rem)
+
+html
+  background-color: $c_bg_dark
