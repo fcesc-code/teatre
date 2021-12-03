@@ -5,7 +5,7 @@
     "jest/globals": true
   },
   "extends": ["airbnb-base", "prettier"],
-  "ignorePatterns": ["*.sass", "*.png", "*.webp"],
+  "ignorePatterns": ["*.sass", "*.png", "*.jpg", "*.webp"],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
