@@ -1,4 +1,52 @@
 @use '../base/' as *
 
-footer
+$footer_height: 3rem
+
+.footer
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-end
+  align-items: center
+  @include smallDevices
+    flex-flow: column-reverse nowrap
+    justify-content: flex-start
+  height: $footer_height
+  font-size: $fsize_m
+  color: $c_txt_main
   background-color: $c_bg_dark
+
+.footer__text
+  font-size: $fsize_m
+  line-heigt: $footer_height
+  padding: 0
+  @include smallDevices
+    text-align: center
+
+.footer__links
+  font-size: inherit
+  color: $c_txt_main
+  text-decoration: dotted underline
+  line-height: $footer_height
+  &:visited
+    color: inherit
+  &:hover, &:focus, &:active
+    color: $c_txt_highlighted
+    text-decoration: underline solid $c_txt_highlighted
+
+.footer__content
+  height: 100%
+  self-align: center
+
+.footer__social
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-end
+  align-items: center
+  height: 100%
+  line-height: $footer_height
+  margin: 0 0 0 calc($footer_height * 1.5)
+  font-size: $fsize_m
+
+.footer__socialIcon
+  margin: 0 calc($footer_height * 0.35)
+  padding: 0
